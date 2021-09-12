@@ -44,6 +44,34 @@ if (charConfirm === false && numberConfirm === false && lowerConfirm === false &
   alert("password must contain at least one parameter")
 }
 
+// generate characters based on criteria
+var passwordCharacter = [];
+
+if (charConfirm) {
+  passwordCharacter = passwordCharacter.concat(specialChar)
+}
+if (numberConfirm) {
+  passwordCharacter = passwordCharacter.concat(number)
+}
+if (lowerConfirm) {
+  passwordCharacter = passwordCharacter.concat(alphaLower)
+}
+if (upperConfirm) {
+  passwordCharacter = passwordCharacter.concat(alphaUpper)
+}
+console.log(passwordCharacter)
+
+// Produce randomized password at the length of characters the user chose
+
+var randomPassword = ""
+
+for(var i = 0; i < lengthPrompt; i++) {
+  randomPassword = randomPassword + passwordCharacter[Math.floor(Math.random() * passwordCharacter.length)];
+  console.log(randomPassword)
+}
+
+return randomPassword;
+
 
 };
 
