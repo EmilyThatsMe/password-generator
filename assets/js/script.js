@@ -19,6 +19,7 @@ if (lengthPrompt === "" || lengthPrompt === null) {
 while(lengthPrompt <= 7 || lengthPrompt >= 129) {
   alert("Password must be between 8 and 128 characters. Please try again");
   var lengthPrompt = pompt("How many characters would you like your password to have?");
+  prompt(lengthPrompt);
 }
 
 // ask for character types
